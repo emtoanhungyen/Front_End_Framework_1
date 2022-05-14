@@ -8,11 +8,11 @@ import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { AppProductComponent } from './components/app-product/app-product.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DemoComponent, PagesComponent, ProductsComponent, ProductDetailComponent, AppProductComponent
+    AppComponent, DemoComponent, PagesComponent, ProductsComponent, ProductDetailComponent, ProductAddComponent
   ],
   imports: [
     BrowserModule,
