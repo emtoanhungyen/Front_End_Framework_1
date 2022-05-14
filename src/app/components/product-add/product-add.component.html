@@ -1,5 +1,8 @@
 <div>
-    <input type="text" placeholder="name">
-    <input type="price" placeholder="price">
-    <button>submit</button>
+    {{product | json}}
+    <form (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="name" [(ngModel)]="product.name" name="name">
+        <input type="price" placeholder="price" [(ngModel)]="product.price" name="price">
+        <button>Add</button>
+    </form>
 </div>

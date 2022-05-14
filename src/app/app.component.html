@@ -6,6 +6,7 @@
 
 <h4>Product List Component</h4>
 <app-products [products]="productsList"></app-products>
- 
+
+<app-product-add (onAddProduct)="onHandleAdd($event)"></app-product-add>
 
 <router-outlet></router-outlet>

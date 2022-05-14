@@ -14,4 +14,10 @@ export class AppComponent {
     {id: 2, name: "Product B", price: 200, status: false},
     {id: 3, name: "Product C", price: 300, status: false}
   ];
+
+  onHandleAdd(product: any){
+    console.log('product', product);
+    
+    this.productsList.push(product);
+  }
 }
