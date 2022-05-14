@@ -7,10 +7,12 @@ import { DemoComponent } from 'src/app/components/demo.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AppProductComponent } from './components/app-product/app-product.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DemoComponent, PagesComponent, ProductsComponent
+    AppComponent, DemoComponent, PagesComponent, ProductsComponent, ProductDetailComponent, AppProductComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/types/Products';
 
 @Component({
   selector: 'app-products',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+
+  productDetail !: IProduct;
   
   componentName: string = "Hello word";
 
@@ -22,6 +25,12 @@ export class ProductsComponent implements OnInit {
 
   onClick() {
     this.isStatus = !this.isStatus;
+  }
+
+  onHandleGetInfo(product: IProduct){
+    console.log('product', product);
+    this.productDetail = product;
+    
   }
 
   onHandleRemove(id: number){

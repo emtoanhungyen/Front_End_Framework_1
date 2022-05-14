@@ -28,8 +28,13 @@
                 <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
                 <td>
                     <button type="button" class="btn btn-danger" (click)="onHandleRemove(product.id)">Delete</button>
+                    <button class="btn btn-success" (click)="onHandleGetInfo(product)">Detail</button>
                 </td>
             </tr>
         </tbody>
     </table>
+    <hr>
+    <div class="productDetail" *ngIf="productDetail">
+        <app-product-detail [product]="productDetail"></app-product-detail>
+    </div>
 </div>
