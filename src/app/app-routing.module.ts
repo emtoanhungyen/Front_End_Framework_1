@@ -1,11 +1,13 @@
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductsComponent } from './components/products/products.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DemoComponent } from './components/demo.component';
-import { PagesComponent } from './pages/pages.component';
 
 const routes: Routes = [
-  { path: 'demo', component: DemoComponent },
-  { path: 'table', component: PagesComponent }
+  { path: 'home_page', component: HomePageComponent },
+  { path: 'manager_product', component: ProductsComponent },
+  { path: 'product_add', component: ProductAddComponent },
 ];
 
 @NgModule({

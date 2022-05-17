@@ -8,9 +8,15 @@ import { IProduct } from 'src/app/types/Products';
 })
 export class ProductsComponent implements OnInit {
 
-  @Input() products !: IProduct[];
+  @Input() product !: IProduct[];
   productDetail !: IProduct;
  
+  products: IProduct[] = [
+    {id: 1, name: "Product A", price: 100, status: true},
+    {id: 2, name: "Product B", price: 200, status: false},
+    {id: 3, name: "Product C", price: 300, status: false}
+  ];
+
   constructor() { }
  
   onHandleGetInfo(product: IProduct){
