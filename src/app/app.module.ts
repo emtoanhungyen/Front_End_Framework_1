@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoComponent } from 'src/app/components/demo.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +12,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DemoComponent, PagesComponent, ProductsComponent, ProductDetailComponent, ProductAddComponent, HomePageComponent
+    AppComponent, PagesComponent, ProductsComponent, ProductDetailComponent, ProductAddComponent, HomePageComponent
   ],
   imports: [
     BrowserModule,

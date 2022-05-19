@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IProduct } from './types/Products';
+import { data } from './data';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,7 @@ import { IProduct } from './types/Products';
 export class AppComponent {
   title = 'my-app';
 
-  productsList: IProduct[] = [
-    {id: 1, name: "Product A", price: 100, status: true},
-    {id: 2, name: "Product B", price: 200, status: false},
-    {id: 3, name: "Product C", price: 300, status: false}
-  ];
+  productsList: IProduct[] = data;
 
   onHandleAdd(product: any){
     console.log('product', product);

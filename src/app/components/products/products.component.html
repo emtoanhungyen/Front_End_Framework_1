@@ -1,14 +1,3 @@
-<!-- 
-<button>Save</button> <input type="text" [(ngModel)] = "productName">
-{{productName}}
-
-<hr>
-{{componentName}}
-<br>
-{{isStatus}}
-<hr>
-<button class="btn btn-info" (click)="onClick()">Click</button>
-{{ isStatus }} -->
 <table class="table">
     <thead>
         <tr>
@@ -26,14 +15,9 @@
             <td>{{ product.price }}</td>
             <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
             <td>
-                <button type="button" class="btn btn-danger" (click)="onHandleRemove(product.id)">Delete</button>
-                <button class="btn btn-success" (click)="onHandleGetInfo(product)">Detail</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button class="btn btn-success">Detail</button>
             </td>
         </tr>
     </tbody>
 </table>
-<hr>
-
-<div class="productDetail" *ngIf="productDetail">
-    <app-product-detail [product]="productDetail"></app-product-detail>
-</div>
