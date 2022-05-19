@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { data } from 'src/app/data';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { IProduct } from 'src/app/types/Products';
 
@@ -10,12 +9,12 @@ import { IProduct } from 'src/app/types/Products';
 })
 export class ProductsComponent implements OnInit {
 
-  products: IProduct[] = data;
+  products!: IProduct[];
 
   constructor(
     private productService: ProductService
   ) {
-    // this.productList = this.productService.productList();
+    this.products = this.productService.productList()!;
   }
 
   // onHandleGetInfo(product: IProduct){

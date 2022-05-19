@@ -17,7 +17,7 @@ export class ProductService {
 
   }
   productList() {
-    data;
+   return data;
   }
   updateProduct() {
 
