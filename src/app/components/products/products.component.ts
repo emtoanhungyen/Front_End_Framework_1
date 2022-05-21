@@ -13,20 +13,22 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productService: ProductService
-  ) {
-    this.products = this.productService.productList()!;
-  }
-
-  // onHandleGetInfo(product: IProduct){
-  //   console.log('product', product);
-  //   this.productDetail = product;
-  // } 
-
-  // onHandleRemove(id: number){
-  //   this.products = this.products.filter(product => product.id !== id);
-  // }
+  ) { }
 
   ngOnInit(): void {
+    this.getProductList();
   }
-
+  delete(id: any) {
+    const confirm = window.confirm("Bạn có muốn xóa?");
+    if (confirm) {
+      this.productService.removeProduct(id).subscribe(data => {
+        // reRender
+      })
+    }
+  }
+  getProductList() {
+    this.productService.productList().subscribe(data => {
+      this.products = data;
+    })
+  }
 }

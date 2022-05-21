@@ -14,12 +14,11 @@ export class ProductDetailComponent implements OnInit {
     private router: ActivatedRoute,
     private serviceProduct: ProductService
   ) {
-    console.log(this.router.snapshot.paramMap.get('id'));
     const id = this.router.snapshot.paramMap.get('id');
 
-    this.product = this.serviceProduct.getProduct(id)!;
-    console.log(this.product);
-    
+    this.serviceProduct.getProduct(id).subscribe(data => {
+      this.product = data;
+    })
   }
 
   ngOnInit(): void {
