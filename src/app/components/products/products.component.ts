@@ -18,11 +18,11 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.getProductList();
   }
-  delete(id: any) {
+  delete(id: number) {
     const confirm = window.confirm("Bạn có muốn xóa?");
     if (confirm) {
-      this.productService.removeProduct(id).subscribe(data => {
-        // reRender
+      this.productService.removeProduct(id).subscribe(() => {
+        this.products = this.products.filter(item => item.id !== id);
       })
     }
   }

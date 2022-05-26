@@ -15,7 +15,7 @@
             <td>{{ product.price }}</td>
             <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
             <td>
-                <button type="button" class="btn btn-danger" (click)="delete(product.id)">Delete</button>
+                <button type="button" class="btn btn-danger" (click)="delete(product.id!)">Delete</button>
                 <button class="btn btn-success">Detail</button>
             </td>
         </tr>

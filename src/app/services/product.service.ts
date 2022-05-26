@@ -14,16 +14,16 @@ export class ProductService {
   getProduct(id: any): Observable<IProduct> {
     return this.http.get<IProduct>(`http://localhost:3000/products/${id}`);
   }
-  removeProduct(id: any) {
-    return this.http.delete(`http://localhost:3000/products/${id}`)
+  removeProduct(id: number) {
+    return this.http.delete(`http://localhost:3000/products/${id}`);
   }
-  addProduct(product: any) {
-    
+  addProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(`http://localhost:3000/products`, product);
   }
   productList(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(`http://localhost:3000/products`);
   }
-  updateProduct() {
-
+  updateProduct(product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(`http://localhost:3000/products/${product.id}`, product);
   }
 }

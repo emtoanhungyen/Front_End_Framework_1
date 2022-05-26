@@ -9,8 +9,26 @@
     {
       "id": 3,
       "name": "Product C",
-      "price": 400,
-      "status": true
+      "price": 200,
+      "status": false
+    },
+    {
+      "name": "admin",
+      "price": 100,
+      "status": true,
+      "id": 4
+    },
+    {
+      "name": "Phạm Quốc Toản",
+      "price": 28374374377,
+      "status": true,
+      "id": 6
+    },
+    {
+      "name": "admin update",
+      "price": 28374374377,
+      "status": true,
+      "id": 7
     }
   ]
 }
