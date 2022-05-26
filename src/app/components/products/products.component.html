@@ -1,4 +1,28 @@
-<table class="table">
+<nz-table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th><a href="/product/add" nz-button nzType="primary" nzGhost>Add</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let index = index">
+            <th>{{ index + 1 }}</th>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
+            <td>
+                <button type="button" nz-button nzType="default" nzDanger (click)="delete(product.id!)">Delete</button>
+                <a href="/product/edit/{{ product.id }}" nz-button nzType="primary" nzGhost>Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>
+
+<!-- <table class="table">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -16,8 +40,9 @@
             <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
             <td>
                 <button type="button" class="btn btn-danger" (click)="delete(product.id!)">Delete</button>
+                <a href="/product/edit/{{ product.id }}" nz-button nzType="primary">edit</a>
                 <button class="btn btn-success">Detail</button>
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->

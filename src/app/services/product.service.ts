@@ -7,23 +7,25 @@ import { IProduct } from '../types/Products';
 })
 export class ProductService {
 
+  API_URL: string = `http://localhost:3000/products`;
+
   constructor(
     private http: HttpClient
   ) { }
 
   getProduct(id: any): Observable<IProduct> {
-    return this.http.get<IProduct>(`http://localhost:3000/products/${id}`);
+    return this.http.get<IProduct>(`${this.API_URL}/${id}`);
   }
   removeProduct(id: number) {
-    return this.http.delete(`http://localhost:3000/products/${id}`);
+    return this.http.delete(`${this.API_URL}/${id}`);
   }
   addProduct(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>(`http://localhost:3000/products`, product);
+    return this.http.post<IProduct>(`${this.API_URL}`, product);
   }
   productList(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(`http://localhost:3000/products`);
+    return this.http.get<IProduct[]>(`${this.API_URL}`);
   }
   updateProduct(product: IProduct): Observable<IProduct> {
-    return this.http.put<IProduct>(`http://localhost:3000/products/${product.id}`, product);
+    return this.http.put<IProduct>(`${this.API_URL}/${product.id}`, product);
   }
 }

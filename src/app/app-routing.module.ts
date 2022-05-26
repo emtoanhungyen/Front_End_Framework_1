@@ -9,7 +9,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'product', component: ProductsComponent },
-  { path: 'product_add', component: ProductAddComponent },
+  { path: 'product/add', component: ProductAddComponent },
   { path: 'product/edit/:id', component: ProductAddComponent },
   { path: 'product/:id', component: ProductDetailComponent },
   { path: '**', component: NotFoundComponent},
